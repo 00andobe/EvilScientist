@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil Scientists</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Evil Scientists</h1>
+        <article id="article-container">
+        <article>
+            <section>
+                <form>
+                    <p>
+                        <label for="evilScientistName">Name</label><br><input type="text" tabindex="1"
+                            name="evilScientistName" id="evilScientistName">
+                    </p>
+                    <p>
+                        <label for="evilScientistHenchmen">Number of Henchmen</label><br><input type="number"
+                            tabindex="3" name="evilScientistHenchmen"id="evilScientistHenchmen">
+                    </p>
+                    <p>
+                        <label for="evilScientistDescription">Short Description</label><br><input type="text"
+                            tabindex="4" name="evilScientistDescription"id="evilScientistDescription">
+                    </p>
+                    <p>
+                      <button id="add-form" type="submit">Add Scientist</button>
+                    </p>
+                </form>
+            </section>
+            <section id="scientist-List">
+            </section>
+            <section id="selected-Scientist"></section>
+        </article>
+      </article>
+        
+    </main>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
