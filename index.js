@@ -25,3 +25,21 @@ function printScientist() {
         });
     });
 }
+var submitForm = document.getElementById("add-form"); // Eventlistener på knapp
+submitForm.addEventListener("click", function (event) {
+    event.preventDefault();
+    var evilScientistName = document.querySelector("#evilScientistName").value;
+    var evilScientistHenchmen = Number(document.querySelector("#evilScientistHenchmen").value);
+    var evilScientistDescription = document.querySelector("#evilScientistDescription").value;
+    var scientist = {
+        name: evilScientistName,
+        henchmen: evilScientistHenchmen,
+        description: evilScientistDescription
+    };
+    var inputFields = document.querySelectorAll("input"); //Clearar input fields
+    inputFields.forEach(function (input) {
+        input.value = "";
+    });
+    scientists.push(scientist); //pushar in det nya objektet o sedan kallar på print functionen
+    printScientist();
+});

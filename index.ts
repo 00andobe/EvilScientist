@@ -29,3 +29,23 @@ function printScientist() {
     });
   });
 }
+const submitForm = document.getElementById("add-form") as HTMLInputElement; // Eventlistener på knapp
+    submitForm.addEventListener("click", (event:Event) => {
+      event.preventDefault();
+      let evilScientistName: any = (document.querySelector("#evilScientistName") as HTMLInputElement).value;
+      let evilScientistHenchmen: number = Number((document.querySelector("#evilScientistHenchmen") as HTMLInputElement).value);
+      let evilScientistDescription: any = (document.querySelector("#evilScientistDescription") as HTMLInputElement).value;
+
+      const scientist = {
+        name: evilScientistName,
+        henchmen: evilScientistHenchmen,
+        description: evilScientistDescription,
+}; 
+const inputFields = document.querySelectorAll("input"); //Clearar input fields
+inputFields.forEach(input => {
+  input.value = "";
+});
+
+scientists.push(scientist); //pushar in det nya objektet o sedan kallar på print functionen
+printScientist();
+    });
